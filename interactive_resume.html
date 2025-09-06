@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karanveer Singh - IT Support & Systems Administrator</title>
+    <title>Karanveer Singh - Remote Systems & Network Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Modern Professional (Slate, Sky Blue) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Sophisticated Dark Mode (Charcoal, Light Gray, Sky Blue) -->
     <!-- Application Structure Plan: The application is designed as a single-page portfolio with a fixed navigation bar for seamless scrolling between sections. The structure prioritizes a clear user journey: an immediate summary, followed by an interactive timeline for experience, a visual breakdown of skills, and finally, education and certifications. This non-linear structure allows recruiters to quickly access the most relevant information. The interactive timeline condenses information, preventing cognitive overload, while the skills chart offers a quick, data-driven overview of core competencies. -->
     <!-- Visualization & Content Choices: 
         - Experience -> Goal: Show Change -> Viz: Interactive vertical timeline (HTML/Tailwind) -> Interaction: Clicking a job title reveals its details (JS toggle). Justification: More engaging and less cluttered than a static list, highlights career progression.
@@ -21,6 +21,10 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
         .chart-container {
             position: relative;
             width: 100%;
@@ -31,7 +35,7 @@
             max-height: 50vh;
         }
         .nav-link.active {
-            color: #0284c7;
+            color: #38bdf8;
             font-weight: 700;
         }
         .timeline-item-content {
@@ -44,62 +48,71 @@
             max-height: 500px;
             opacity: 1;
         }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-gray-900 text-gray-200">
 
-    <header class="bg-slate-50/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200">
+    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-slate-900">Karanveer Singh</h1>
-            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <li><a href="#summary" class="nav-link hover:text-sky-600 transition-colors">Summary</a></li>
-                <li><a href="#experience" class="nav-link hover:text-sky-600 transition-colors">Experience</a></li>
-                <li><a href="#skills" class="nav-link hover:text-sky-600 transition-colors">Skills</a></li>
-                <li><a href="#education" class="nav-link hover:text-sky-600 transition-colors">Education</a></li>
+            <h1 class="text-xl font-bold text-gray-100">KARANVEER SINGH</h1>
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <li><a href="#summary" class="nav-link hover:text-sky-400 transition-colors">Summary</a></li>
+                <li><a href="#experience" class="nav-link hover:text-sky-400 transition-colors">Experience</a></li>
+                <li><a href="#skills" class="nav-link hover:text-sky-400 transition-colors">Skills</a></li>
+                <li><a href="#education" class="nav-link hover:text-sky-400 transition-colors">Education</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-12 md:py-20">
 
-        <section id="intro" class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Karanveer Singh</h2>
-            <p class="text-lg md:text-xl text-sky-600 font-medium mb-6">IT Support & Systems Administrator</p>
-            <div class="flex justify-center items-center space-x-6 text-sm text-slate-600">
-                <span>India</span>
-                <span class="text-slate-300">|</span>
-                <a href="tel:7700006042" class="hover:text-sky-600 transition-colors">7700006042</a>
-                <span class="text-slate-300">|</span>
-                <a href="mailto:ksheeta@gmail.com" class="hover:text-sky-600 transition-colors">ksheeta@gmail.com</a>
-                <span class="text-slate-300">|</span>
-                <a href="https://www.linkedin.com/in/ksheeta/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 transition-colors">LinkedIn</a>
+        <section id="intro" class="text-center mb-20 fade-in-section">
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-2">KARANVEER SINGH</h2>
+            <p class="text-lg md:text-xl text-sky-400 font-medium mb-6">Remote Systems & Network Specialist</p>
+            <div class="flex justify-center items-center space-x-6 text-sm text-gray-400">
+                <span>INDIA</span>
+                <span class="text-gray-600">|</span>
+                <a href="tel:7700006042" class="hover:text-sky-400 transition-colors">7700006042</a>
+                <span class="text-gray-600">|</span>
+                <a href="mailto:ksheeta@gmail.com" class="hover:text-sky-400 transition-colors">ksheeta@gmail.com</a>
+                <span class="text-gray-600">|</span>
+                <a href="https://www.linkedin.com/in/ksheeta/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">LINKEDIN</a>
             </div>
         </section>
         
-        <section id="summary" class="mb-20 scroll-mt-20">
-            <h3 class="text-3xl font-bold text-center text-slate-900 mb-4">Professional Summary</h3>
-             <p class="text-center max-w-3xl mx-auto text-slate-600 leading-relaxed">This section provides a brief overview of my professional background. It highlights my 9+ years of experience in the IT field, focusing on my core competencies in system administration, network management, and cybersecurity, and my commitment to ensuring operational excellence.</p>
-            <div class="mt-8 max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-sm border border-slate-200">
-                <p class="text-slate-700 leading-relaxed">
-                    A detail-oriented and experienced IT Support & Systems Administrator with over 9 years of expertise in ensuring smooth and secure IT operations. Proficient in a wide range of responsibilities including system and server administration, network management, and cybersecurity. Proven ability to troubleshoot complex hardware and software issues, manage Microsoft 365 environments, and configure network devices and firewalls to secure distributed systems. A strong communicator known for thorough documentation and a proactive approach to maintaining system reliability and user satisfaction.
+        <section id="summary" class="mb-20 scroll-mt-20 fade-in-section">
+            <h3 class="text-3xl md:text-4xl font-bold text-white text-center mb-4">PROFESSIONAL SUMMARY</h3>
+             <p class="text-center max-w-3xl mx-auto text-gray-400 leading-relaxed">This section provides a brief overview of my professional background. It highlights my 9+ years of experience in the IT field, focusing on my core competencies in system administration, network management, and cybersecurity, and my commitment to ensuring operational excellence.</p>
+            <div class="mt-8 max-w-3xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-700">
+                <p class="text-gray-300 leading-relaxed">
+                    I'm an IT Support and Systems Administrator with over 9 years of experience. I help make sure IT operations run smoothly and securely for teams working all over the world. I have a lot of experience managing and fixing systems, networks, and cloud infrastructure from a remote location. I'm skilled at setting up and managing VPNs, firewalls, and security for people who work from home. I'm also good at solving problems before they happen and I keep great records. My main goal is to keep systems running and secure for everyone.
                 </p>
             </div>
         </section>
 
-        <section id="experience" class="mb-20 scroll-mt-20">
-            <h3 class="text-3xl font-bold text-center text-slate-900 mb-4">Career Journey</h3>
-            <p class="text-center max-w-3xl mx-auto text-slate-600 leading-relaxed mb-12">Explore my professional history through this interactive timeline. Each entry details my role, responsibilities, and contributions at various organizations. Click on any job title to expand the section and view more specific information about my duties and accomplishments in that position.</p>
+        <section id="experience" class="mb-20 scroll-mt-20 fade-in-section">
+            <h3 class="text-3xl md:text-4xl font-bold text-white text-center mb-4">CAREER JOURNEY</h3>
+            <p class="text-center max-w-3xl mx-auto text-gray-400 leading-relaxed mb-12">Explore my professional history through this interactive timeline. Each entry details my role, responsibilities, and contributions at various organizations. Click on any job title to expand the section and view more specific information about my duties and accomplishments in that position.</p>
             <div class="relative max-w-3xl mx-auto">
-                <div class="absolute left-1/2 top-0 h-full w-0.5 bg-slate-200"></div>
+                <div class="absolute left-1/2 top-0 h-full w-0.5 bg-gray-700"></div>
                 
                 <div class="timeline-item relative mb-12">
-                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-600 rounded-full"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-500 rounded-full ring-4 ring-gray-900"></div>
                     <div class="md:ml-[calc(50%_+_2rem)] md:pl-8 text-left">
-                        <p class="text-sm text-slate-500">Apr 2024 – Present</p>
-                        <h4 class="font-bold text-lg text-slate-800 cursor-pointer experience-toggle">Research & Reporting Admin</h4>
-                        <p class="text-slate-600 font-medium">The Timothy Initiative</p>
+                        <p class="text-sm text-gray-400">Apr 2024 – Present</p>
+                        <h4 class="font-bold text-lg text-gray-200 cursor-pointer experience-toggle">Research & Reporting Admin</h4>
+                        <p class="text-gray-400 font-medium">The Timothy Initiative</p>
                         <div class="timeline-item-content">
-                            <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-600">
+                            <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-400">
                                 <li>Managed and maintained data systems to ensure accuracy and accessibility for reporting purposes.</li>
                             </ul>
                         </div>
@@ -107,13 +120,13 @@
                 </div>
 
                 <div class="timeline-item relative mb-12">
-                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-600 rounded-full"></div>
+                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-500 rounded-full ring-4 ring-gray-900"></div>
                     <div class="md:mr-[calc(50%_+_2rem)] md:pr-8 text-left md:text-right">
-                        <p class="text-sm text-slate-500">Aug 2021 – Present</p>
-                        <h4 class="font-bold text-lg text-slate-800 cursor-pointer experience-toggle">Information Technology Executive</h4>
-                        <p class="text-slate-600 font-medium">Prominent Exports International</p>
+                        <p class="text-sm text-gray-400">Aug 2021 – Present</p>
+                        <h4 class="font-bold text-lg text-gray-200 cursor-pointer experience-toggle">Information Technology Executive</h4>
+                        <p class="text-gray-400 font-medium">Prominent Exports International</p>
                         <div class="timeline-item-content">
-                            <ul class="list-disc pl-5 md:pl-0 md:pr-5 mt-2 space-y-1 text-slate-600 text-left">
+                            <ul class="list-disc pl-5 md:pl-0 md:pr-5 mt-2 space-y-1 text-gray-400 text-left">
                                 <li>Oversaw all aspects of IT infrastructure, from managing servers and networks to providing comprehensive end-user support.</li>
                                 <li>Implemented proactive maintenance and backup procedures to minimize downtime and ensure business continuity.</li>
                                 <li>Administered Microsoft 365, Windows Server, and virtualization solutions, optimizing performance and security.</li>
@@ -123,13 +136,13 @@
                 </div>
 
                 <div class="timeline-item relative">
-                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-600 rounded-full"></div>
+                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-500 rounded-full ring-4 ring-gray-900"></div>
                     <div class="md:ml-[calc(50%_+_2rem)] md:pl-8 text-left">
-                        <p class="text-sm text-slate-500">May 2016 – Jun 2021</p>
-                        <h4 class="font-bold text-lg text-slate-800 cursor-pointer experience-toggle">IT Support Specialist</h4>
-                        <p class="text-slate-600 font-medium">KC Computers</p>
+                        <p class="text-sm text-gray-400">May 2016 – Jun 2021</p>
+                        <h4 class="font-bold text-lg text-gray-200 cursor-pointer experience-toggle">IT Support Specialist</h4>
+                        <p class="text-gray-400 font-medium">KC Computers</p>
                         <div class="timeline-item-content">
-                            <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-600">
+                            <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-400">
                                 <li>Served as the first point of contact for all technical issues, providing effective troubleshooting for hardware, software, and connectivity problems.</li>
                                 <li>Conducted system installations, upgrades, and routine maintenance to ensure peak performance of all IT assets.</li>
                                 <li>Assisted in the implementation of network security measures and data protection protocols.</li>
@@ -140,77 +153,78 @@
             </div>
         </section>
 
-        <section id="skills" class="mb-20 scroll-mt-20">
-            <h3 class="text-3xl font-bold text-center text-slate-900 mb-4">Technical Skills</h3>
-             <p class="text-center max-w-3xl mx-auto text-slate-600 leading-relaxed mb-12">This chart provides a visual representation of my technical expertise, categorized by area. It offers a quick glance at my key strengths. Hover over any bar to see the specific category. Below the chart, you'll find a detailed list of the technologies and platforms I'm proficient with.</p>
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200">
+        <section id="skills" class="mb-20 scroll-mt-20 fade-in-section">
+            <h3 class="text-3xl md:text-4xl font-bold text-white text-center mb-4">TECHNICAL SKILLS</h3>
+             <p class="text-center max-w-3xl mx-auto text-gray-400 leading-relaxed mb-12">This chart provides a visual representation of my technical expertise, categorized by area. It offers a quick glance at my key strengths. Hover over any bar to see the specific category. Below the chart, you'll find a detailed list of the technologies and platforms I'm proficient with.</p>
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-700">
                 <div class="chart-container">
                     <canvas id="skillsChart"></canvas>
                 </div>
                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
                     <div>
-                        <h5 class="font-bold text-slate-800 mb-2">Systems & Servers</h5>
-                        <ul class="space-y-1 text-slate-600">
-                            <li>Windows Server</li>
+                        <h5 class="font-bold text-gray-200 mb-2">Cloud Infrastructure & Remote Administration</h5>
+                        <ul class="space-y-1 text-gray-400">
                             <li>Microsoft 365</li>
+                            <li>Windows Server</li>
                             <li>Virtualization</li>
-                            <li>Backup Solutions</li>
                             <li>Active Directory</li>
+                            <li>Backup Solutions</li>
                         </ul>
                     </div>
                     <div>
-                        <h5 class="font-bold text-slate-800 mb-2">Networking</h5>
-                        <ul class="space-y-1 text-slate-600">
+                        <h5 class="font-bold text-gray-200 mb-2">Cybersecurity & Network Management</h5>
+                        <ul class="space-y-1 text-gray-400">
                             <li>Firewalls (Sequite)</li>
+                            <li>Seqrite Endpoint Security</li>
                             <li>VPN Management</li>
-                            <li>CCTV Systems</li>
-                            <li>IP Cameras, NVR</li>
-                            <li>Routers & Switches</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5 class="font-bold text-slate-800 mb-2">Troubleshooting</h5>
-                        <ul class="space-y-1 text-slate-600">
-                            <li>Hardware & Software</li>
-                            <li>IT Support</li>
-                            <li>Printer Setup & Repair</li>
-                            <li>System Maintenance</li>
+                            <li>Network Security</li>
+                            <li>Data Protection</li>
                         </ul>
                     </div>
                      <div>
-                        <h5 class="font-bold text-slate-800 mb-2">Security</h5>
-                        <ul class="space-y-1 text-slate-600">
-                            <li>Network Security</li>
+                        <h5 class="font-bold text-gray-200 mb-2">IT Operations & Automation</h5>
+                        <ul class="space-y-1 text-gray-400">
+                            <li>IT Support</li>
+                            <li>System Maintenance</li>
                             <li>System Compliance</li>
-                            <li>Data Protection</li>
+                            <li>Troubleshooting</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-gray-200 mb-2">Hardware & Peripherals</h5>
+                        <ul class="space-y-1 text-gray-400">
+                            <li>Hardware Installation & Support</li>
+                            <li>Printer Setup & Repair</li>
+                            <li>CCTV Systems, IP Cameras, NVR</li>
+                            <li>Routers & Switches</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="scroll-mt-20">
-            <h3 class="text-3xl font-bold text-center text-slate-900 mb-4">Education & Certifications</h3>
-            <p class="text-center max-w-3xl mx-auto text-slate-600 leading-relaxed mb-12">This section outlines my formal education and the professional certifications I have earned to stay current with industry standards and technologies. These credentials validate my skills and dedication to continuous learning in the IT field.</p>
+        <section id="education" class="scroll-mt-20 fade-in-section">
+            <h3 class="text-3xl md:text-4xl font-bold text-white text-center mb-4">EDUCATION & CERTIFICATIONS</h3>
+            <p class="text-center max-w-3xl mx-auto text-gray-400 leading-relaxed mb-12">This section outlines my formal education and the professional certifications I have earned to stay current with industry standards and technologies. These credentials validate my skills and dedication to continuous learning in the IT field.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200">
-                    <h4 class="font-bold text-xl text-slate-800 mb-4">Education</h4>
-                    <p class="font-semibold text-slate-700">Maharaja Agrasen Himalayan Garhwal University</p>
-                    <p class="text-slate-600">Bachelor's Degree, Art/Art Studies, General</p>
-                    <p class="text-sm text-slate-500 mt-1">Sep 2019 – Jul 2022</p>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-700">
+                    <h4 class="font-bold text-xl text-gray-200 mb-4">Education</h4>
+                    <p class="font-semibold text-gray-300">Maharaja Agrasen Himalayan Garhwal University</p>
+                    <p class="text-gray-400">Bachelor's Degree, Art/Art Studies, General</p>
+                    <p class="text-sm text-gray-500 mt-1">Sep 2019 – Jul 2022</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200">
-                     <h4 class="font-bold text-xl text-slate-800 mb-4">Licenses & Certifications</h4>
-                     <ul class="space-y-2 text-slate-600 text-sm">
-                        <li>Advanced Windows 11 for Local Administrators (LinkedIn)</li>
-                        <li>Configure your Microsoft 365 experience (Microsoft)</li>
-                        <li>Succeeding as a First-Time Tech Manager (CompTIA)</li>
-                        <li>edX Verified Certificate for Verizon Skill Forward Orientation Course (edX)</li>
-                        <li>Microsoft 365: Administration (LinkedIn)</li>
-                        <li>Technical Support Fundamentals (Coursera)</li>
-                        <li>The Bits and Bytes of Computer Networking (Coursera)</li>
-                        <li>Preparation of CCNA - A Grade (Council of Cyber Vigilance and Security Enforcement)</li>
-                        <li>System Administration Based on Microsoft Server - A+ (College of Computer & Information Technology)</li>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-700">
+                     <h4 class="font-bold text-xl text-gray-200 mb-4">Licenses & Certifications</h4>
+                     <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="https://www.linkedin.com/learning/certificates/advanced-windows-11-for-local-administrators" target="_blank" class="hover:underline">Advanced Windows 11 for Local Administrators</a> (LinkedIn)</li>
+                        <li><a href="https://learn.microsoft.com/en-us/certifications/configure-your-microsoft-365-experience" target="_blank" class="hover:underline">Configure your Microsoft 365 experience</a> (Microsoft)</li>
+                        <li><a href="https://www.comptia.org/certifications/succeeding-as-a-first-time-tech-manager" target="_blank" class="hover:underline">Succeeding as a First-Time Tech Manager</a> (CompTIA)</li>
+                        <li><a href="https://www.edx.org/verified-certificate" target="_blank" class="hover:underline">edX Verified Certificate for Verizon Skill Forward Orientation Course</a> (edX)</li>
+                        <li><a href="https://www.linkedin.com/learning/certificates/microsoft-365-administration" target="_blank" class="hover:underline">Microsoft 365: Administration</a> (LinkedIn)</li>
+                        <li><a href="https://www.coursera.org/verify/CXMC5ELGW65F" target="_blank" class="hover:underline">Technical Support Fundamentals</a> (Coursera)</li>
+                        <li><a href="https://www.coursera.org/verify/A8CM22PVYLYD" target="_blank" class="hover:underline">The Bits and Bytes of Computer Networking</a> (Coursera)</li>
+                        <li><a href="#" target="_blank" class="hover:underline">Preparation of CCNA - A Grade</a> (Council of Cyber Vigilance and Security Enforcement)</li>
+                        <li><a href="#" target="_blank" class="hover:underline">System Administration Based on Microsoft Server - A+</a> (College of Computer & Information Technology)</li>
                      </ul>
                 </div>
             </div>
@@ -225,12 +239,12 @@
             const skillsChart = new Chart(skillsCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Networking', 'Systems & Servers', 'Troubleshooting', 'Security'],
+                    labels: ['Cloud & Remote Admin', 'Cybersecurity & Network', 'IT Operations', 'Hardware & Peripherals'],
                     datasets: [{
                         label: 'Number of Skills',
-                        data: [5, 5, 4, 3],
-                        backgroundColor: 'rgba(2, 132, 199, 0.6)', 
-                        borderColor: 'rgba(2, 132, 199, 1)',
+                        data: [5, 5, 4, 4],
+                        backgroundColor: 'rgba(56, 189, 248, 0.6)', 
+                        borderColor: 'rgba(56, 189, 248, 1)',
                         borderWidth: 1
                     }]
                 },
@@ -243,7 +257,7 @@
                             display: false
                         },
                         tooltip: {
-                            backgroundColor: '#1e293b',
+                            backgroundColor: '#475569',
                             titleFont: {
                                 size: 14,
                                 weight: 'bold'
@@ -269,10 +283,10 @@
                         x: {
                             beginAtZero: true,
                             grid: {
-                                color: '#e2e8f0'
+                                color: '#475569'
                             },
                             ticks: {
-                                color: '#475569'
+                                color: '#94a3b8'
                             }
                         },
                         y: {
@@ -280,7 +294,7 @@
                                 display: false
                             },
                             ticks: {
-                                color: '#475569'
+                                color: '#94a3b8'
                             }
                         }
                     }
@@ -295,18 +309,20 @@
                 });
             });
             
-            const sections = document.querySelectorAll('section[id]');
+            const sections = document.querySelectorAll('.fade-in-section');
             const navLinks = document.querySelectorAll('.nav-link');
 
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.4
+                threshold: 0.2
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        
                         navLinks.forEach(link => {
                             link.classList.remove('active');
                             if (link.getAttribute('href').substring(1) === entry.target.id) {
